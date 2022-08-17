@@ -1,0 +1,69 @@
+<head>
+  <title>EXEMPLOS DE SELETORES</title>
+</head>
+<body>
+<style>
+    body {
+      font: normal 12pt Arial;
+    }
+</style>
+  
+  <h2>Seletores</h2>
+  <div id="exemplo">Exemplo <strong>ID</strong></div>
+  <div class="classe">Exemplo <strong>Class</strong></div>
+  <div name="nome">Exemplo <strong>Name</strong></div>
+  <br>
+  <p>
+    <a class="link" href="https://tableless.com.br/entendendo-o-dom-document-object-model/">Tableless - DOM</a>
+  </p>
+  <br>
+  <hr/>
+  <script>
+  //Apresentação do DOM
+    window.document.write("Exemplo DOM")
+    document.write('<br>')
+    document.write('<h3>Boa Noite!!</h3>')
+    document.write('<br>')
+    document.write(window.document.URL)
+    document.write('<br>')
+    var divID = document.getElementById('exemplo')
+    document.write(divID.innerHTML)
+    document.write('<br>')
+    var divClass = document.getElementsByClassName('classe')[0]
+    document.write(divClass.innerText)
+    document.write('<br>')
+
+    var texto = document.getElementsByTagName('h2')[0]
+    texto.innerHTML = 'Tipo Seletores'
+    texto.style.color = 'blue'
+
+    var nome = document.getElementsByName('nome')[0]
+    console.log(nome)
+  </script>
+  <script>
+    var selector = document.querySelector('div#exemplo')
+    selector.style.background = 'pink'
+    var selectorAll = document.querySelectorAll('a')[0]
+    document.write(selectorAll.getAttribute('href'))
+    document.write('<br>')
+    document.write(selectorAll.class)
+
+    selectorAll.setAttribute('href', 'http://www.ifsp.edu.br')
+    selectorAll.href = 'http://www.ifsp.edu.br'
+    //var divID = document.getElementById('exemplo')
+    console.log(divID.parentElement)
+    console.log(divID.parentNode)
+    console.log(divID.childNodes)
+    console.log(divID.children)
+
+    let link = document.createElement('a')
+    link.href = 'http://www.ifsp.edu.br/'
+    link.textContent = 'IFSP'
+    document.body.append(link)
+
+    let hr = document.createElement('hr')
+    let divID = document.getElementById('exemplo')
+    document.body.insertBefore(hr, divID)
+    
+  </script>
+</body>
