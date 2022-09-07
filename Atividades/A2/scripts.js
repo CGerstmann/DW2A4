@@ -157,35 +157,6 @@ const Form = {
     amount: document.querySelector('input#amount'),
     date: document.querySelector('input#date'),
 
-   
-    /* Formatar Mascara ========================================================= */
-    
-    /*currencyfield.addEventListener('input', format, false)
-
-    formatMask () {
-        let val = currencyfield.value;
-        amount: document.querySelector('input#amount').textContent =  val.toLocaleString('fullwide', {maximumFractionDigits:2, style:'currency', currency:'USD', useGrouping:true})
-    },
-
-    formatMask() {
-        var element = document.getElementById('amount');
-        var valor = element.mask;
-
-        valor = valor + '';
-        valor = parseInt(value.replace(/[\D]+/g, ''));
-        valor = valor + '';
-        valor = valor.replace(/([0-9]{2})$/g, ",$1");
-
-        if (valor.length > 6) {
-            valor = valor.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
-        }
-
-        element.mask = value;
-        if(value == 'NaN') element.mask = '';
-    },
-    
-     ========================================================================== */
-
     getValues() {
         return {
             description: Form.description.value,
